@@ -1,0 +1,24 @@
+Vanilla - 1
+mp_f_freemode_01^jbib_090_u - mp_f_freemode_01^jbib_diff_090_a_uni
+Staff - 2
+mp_f_freemode_01^jbib_091_u - mp_f_freemode_01^jbib_diff_091_a_uni
+mp_f_freemode_01^jbib_092_u - mp_f_freemode_01^jbib_diff_092_a_uni
+Jacket - 0
+Redline - 2
+mp_f_freemode_01^jbib_093_u - mp_f_freemode_01^jbib_diff_093_a_uni
+mp_f_freemode_01^jbib_094_u - mp_f_freemode_01^jbib_diff_094_a_uni
+Medelin - 2 (1 sem ydd)
+mp_f_freemode_01^jbib_095_u - mp_f_freemode_01^jbib_diff_095_a_uni
+Japão - 0
+Italia - 2 (1 sem ydd)
+mp_f_freemode_01^jbib_096_u - mp_f_freemode_01^jbib_diff_096_a_uni
+França - 1
+mp_f_freemode_01^jbib_097_u - mp_f_freemode_01^jbib_diff_097_a_uni
+CV - 1
+mp_f_freemode_01^jbib_098_u - mp_f_freemode_01^jbib_diff_098_a_uni
+Bahamas - 1
+mp_f_freemode_01^jbib_099_u - mp_f_freemode_01^jbib_diff_099_a_uni
+mp_f_freemode_01^jbib_102_u - mp_f_freemode_01^jbib_diff_102_a_uni
+Alemão - 2
+mp_f_freemode_01^jbib_100_u - mp_f_freemode_01^jbib_diff_100_a_uni
+mp_f_freemode_01^jbib_101_u - mp_f_freemode_01^jbib_diff_101_a_uni

@@ -1,0 +1,21 @@
+Vanilla - 2
+mp_f_freemode_01^lowr_067_u
+mp_f_freemode_01^lowr_068_u
+Staff - 1
+mp_f_freemode_01^lowr_069_u
+Jacket - 0
+Redline - 2
+mp_f_freemode_01^lowr_070_u
+mp_f_freemode_01^lowr_071_u
+Medelin - 1
+mp_f_freemode_01^lowr_065_u
+Japão - 1
+mp_f_freemode_01^lowr_066_u
+Italia - 0
+França - 0
+CV - 0
+Bahamas - 1
+mp_f_freemode_01^lowr_072_u
+Alemão - 2
+mp_f_freemode_01^lowr_073_u
+mp_f_freemode_01^lowr_074_u

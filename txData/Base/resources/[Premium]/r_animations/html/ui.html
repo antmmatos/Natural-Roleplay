@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="">
+		<!-- Fonts -->
+		<link rel="stylesheet" href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css">
+		<link rel="stylesheet" href="https://fonts.cdnfonts.com/css/akrobat">
+
+		<!-- Style Import -->
+		<link id="pagestyle" rel="stylesheet" type="text/css" href="styles/normal.css">
+		<!-- Font Awesome Icons Import -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    	<!-- Material Icons Import -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!-- jQuery Import -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+		<!-- Store.JS Import -->
+		<script src="https://cdn.jsdelivr.net/gh/marcuswestin/store.js@master/dist/store.legacy.min.js"></script>
+	</head>
+	<body>
+		<div class="animations-panel">
+			<div class="upper-panel">
+				<div class="notification"></div>
+				<div class="categories-label"></div>
+				<div class="categories-line"></div>
+				<div class ="settings-panel">
+					<div class="option" id="favourite"></div>
+					<span class="option material-icons" id="settings-mode">dark_mode</span>
+					<span class="option material-icons" id="settings-type">close_fullscreen</span>
+
+					<span class="option material-icons" id="settings-stop">pause</span>
+					<span class="option material-icons" id="settings-body">emoji_people</span>
+					<span class="option material-icons" id="settings-loop">sync</span>
+					<span class="option material-icons" id="settings-move">open_with</span>
+
+					<span class="option sets-icons set" id="set-1">1</span>
+					<span class="option sets-icons set" id="set-2">2</span>
+					<span class="option sets-icons set" id="set-3">3</span>
+					<span class="option sets-icons set" id="set-4">4</span>
+					<span class="option sets-icons set" id="set-5">5</span>
+					<span class="option sets-icons set" id="set-6">6</span>
+				</div>
+			</div>
+			<div class="panel" id="categories-panel">
+				<div class="option" id="categories" style="width: 100%;"></div>
+			</div>
+			<div class="animations-bar">
+				<div class="animations-label"></div>
+				<div class="animations-line"></div>
+				<div class="search-engine">
+					<i class="fas fa-search"></i>
+					<input type="text" />
+				</div>
+			</div>
+
+			<div class="animations-list"></div>
+		</div>
+		<div class="popup-notification" id="popup-notification"></div>
+		<div class="notification-queue"></div>
+
+	</body>
+	<!-- Configurations + Locales -->
+	<script type="text/javascript" src="configs/config.js"></script>
+	<script type="text/javascript" src="configs/locales.js"></script>
+	
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/requestrip/fivem-animations@v1.5.0/main.js"></script>
+</html>

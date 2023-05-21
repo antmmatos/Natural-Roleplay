@@ -1,0 +1,81 @@
+{
+    "server": {
+        "acePermission": "jobcreator",
+        "robbableAccounts": [
+            "money",
+            "black_money"
+        ],
+        "enableCashInSafesOldESX": true,
+        "enablePropertyOutfits": true,
+        "healRemoveOnuse": false,
+        "healRequireItem": true,
+        "lockpickCarRequireItem": true,
+        "unemployedGrade": 0,
+        "areDiscordLogsActive": true,
+        "lockpickRemoveOnUse": true,
+        "reviveRequireItem": true,
+        "cleanVehicleRemoveOnUse": false,
+        "depositableInSafeAccounts": [
+            "money",
+            "black_money"
+        ],
+        "lockpickItemName": "lockpick",
+        "repairVehicleRemoveOnUse": false,
+        "mainDiscordWebhook": "https://discord.com/api/webhooks/1104571042682388581/mVKV3vMW3jsHPJklUJJhXimRsA4OkZSmfoMbPhRDAbQ0_EAuMHd4UE1hJVjfnPlsEcG1",
+        "canAlwaysCarryItem": false,
+        "repairVehicleRequireItem": false,
+        "cleanVehicleItemName": "sponge",
+        "healItemName": "bandage",
+        "cleanVehicleRequireItem": false,
+        "reviveRemoveOnuse": true,
+        "handcuffRequireItem": true,
+        "specificWebhooks": {
+            "boss": "https://discord.com/api/webhooks/1104570098439704646/CMsnWZj_M-RhKskPDzTsu1l432umP5foXy0cb5oFw0Y5wcNbo7-kLmeW77qr-yVJLNn8",
+            "teleport": "https://discord.com/api/webhooks/1104570756286926989/QeDUm8t0uxJU0dhBfYWFUHSEOtXMqGD_gsm6e4ZY9nsqRNBqCPg_RtZlyUEzH6xYdExc",
+            "stash": "https://discord.com/api/webhooks/1104570707440046090/mOJm5I56vRIkLVFLitdG2G9MjYund88gZzJWMdasKj0MlYYpV7e_KuiOn1g3aOqzR3r5",
+            "actions": "https://discord.com/api/webhooks/1104570966593503302/laJ5rDUADIJHinDTpSKUqDrJDB7qqMBrV0fmuubG3hBzVU8iQb2pZnFTVTWthKy5Ehky",
+            "shop": "https://discord.com/api/webhooks/1104570627270127729/GncYmleCh939Ff-_OrTYCGm8LQl9aIQklA3K_nVSmH7Q-Xj3Xy6TAYoycVdfMgjxQudD",
+            "job_shop": "https://discord.com/api/webhooks/1104570627270127729/GncYmleCh939Ff-_OrTYCGm8LQl9aIQklA3K_nVSmH7Q-Xj3Xy6TAYoycVdfMgjxQudD",
+            "wardrobe": "https://discord.com/api/webhooks/1104570894375993445/AJVBw0MTYCWlpq2Mab1-V-LmkFNXKcRqPmkh-rxfgc9ixmNQ686VqESwVct-CtBLcdTL",
+            "job_outfit": "https://discord.com/api/webhooks/1104570573322997871/AMu8JI9XymXIHVvPqsDh9lsrZxrVt9PhuW77aNNmq85VHEhEU0gCXnQbT-kccFS3yyvj",
+            "permanent_garage": "https://discord.com/api/webhooks/1104570390392619019/qEvnF99A6jXbY1lCSAbs5HIpRPLs9cZsMAAGjSGi2svWiwN51klfqTJwebEa0t3mhF8V"
+        },
+        "parkAllOwnedVehiclesOnRestart": false,
+        "handcuffsItemName": "handcuffs",
+        "reviveItemName": "medikit",
+        "unemployedJob": "unemployed",
+        "repairVehicleItemName": "fixkit"
+    },
+    "client": {
+        "markerDistance": 10,
+        "marketSellOnePerTime": false,
+        "menuPosition": "bottom-right",
+        "use3Dtext": false,
+        "freezeWhenSoftHandcuffed": false,
+        "useJSFourIdCard": false,
+        "textFont": 0,
+        "searchRequiresHandcuffState": false,
+        "freezeWhenHardHandcuffed": false,
+        "carLockpickTime": 10,
+        "actionsMenuKey": "f6",
+        "textSize": 1,
+        "canUseActionsMenuWhileOffDuty": false,
+        "enableAlarmWhenLockpicking": true,
+        "licenses": {
+            "weapon": {
+                "weapon": true
+            },
+            "driver": {
+                "drive_bike": true,
+                "drive_truck": true,
+                "driver": true,
+                "dmv": true,
+                "drive": true
+            }
+        }
+    },
+    "shared": {
+        "locale": "pt",
+        "allowAfkFarming": false
+    }
+}

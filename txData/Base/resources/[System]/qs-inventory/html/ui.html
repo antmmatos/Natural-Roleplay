@@ -1,0 +1,350 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body style="background-color: rgba(0,0,0,0); font-family: 'Roboto', sans-serif !important;">
+    <div class="stopDragginItemBox">
+        <p>Confirm</p>
+    </div>
+
+    <div class="full-screen">
+        <div class="tintcustom-container" id="tintmenu">
+            <div class="texttintmain">Custom Tint</div>
+            <div class="urlinput"> <input id="tinturlid" placeholder="Tint URL" type="text"> </div>
+            <div class="container">
+                <div class="set-customtint">
+                    <div class="settintcustom">Set Tint</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="quasar-inventory">
+        <div class="inv-playerstats">
+            <div class="test2">
+                <div class="playerstat-item" id="player-hp"> <i class="playerstat-icon far fa-heart">
+                        <p class="playerstat-text" id="playerhp"></p>
+                    </i> </div>
+                <div class="playerstat-item" id="player-armor"> <i class="playerstat-icon fas fa-shield-alt">
+                        <p class="playerstat-text" id="playerarmor"></p>
+                    </i> </div>
+                <div class="playerstat-item" id="player-hunger"> <i class="playerstat-icon fas fa-utensils">
+                        <p class="playerstat-text" id="playerhunger"></p>
+                    </i> </div>
+                <div class="playerstat-item" id="player-thirst"> <i class="playerstat-icon fas fa-tint">
+                        <p class="playerstat-text" id="playerthirst"></p>
+                    </i> </div>
+            </div>
+        </div>
+        <div class="inv-playerstats2">
+            <div class="test3">
+                <div class="playerstat-item" id="player-id"> <i class="playerstat-icon fas fa-address-card">
+                        <p class="playerstat-text" id="playerId"></p>
+                    </i> </div>
+                <div class="playerstat-item" id="player-money"> <i class="playerstat-icon fas fa-money-bill">
+                        <p class="playerstat-text" id="playerMoney"></p>
+                    </i> </div>
+                <div class="playerstat-item" id="player-bank"> <i class="playerstat-icon fas fa-piggy-bank">
+                        <p class="playerstat-text" id="playerBank"></p>
+                    </i> </div>
+                <div class="playerstat-item" id="player-black-money"> <i class="playerstat-icon fas fa-money-bill-wave">
+                        <p class="playerstat-text" id="playerBlackMoney"></p>
+                    </i> </div>
+            </div>
+        </div>
+        <div class="player-inv-info"> <span id="player-inv-label"></span><br> <i class="fas fa-balance-scale" id="weight1" style="margin-top:0.4%;width:3%;left:0px;position:absolute;display:left"></i>
+            <div id="progressbar"> <span id="player-inv-weight"></span>
+                <div class="ply-weight-prog"></div>
+            </div>
+        </div>
+        <div class="other-inv-info"> <span id="other-inv-label"></span><br> <i class="fas fa-balance-scale" id="weight1" style="margin-top:0.4%;width:3%;left:0px;position:absolute;display:left"></i>
+            <div id="progressbar"> <span id="other-inv-weight"></span>
+                <div class="oth-weight-prog"></div>
+            </div>
+        </div>
+        <div class="inv-container">
+            <div class="ply-inv-container">
+                <div class="player-inventory" data-inventory="player"></div>
+            </div>
+            <div class="inv-options">
+                <div class="inv-options-list"> <input type="number" id="item-amount" class="inv-option-item" min=0 value="0" oninput="validity.valid||(value='');" onkeyup="onlyNumbers(this)"></input>
+                    <div class="inv-option-item" id="item-use"></div>
+                    <div class="inv-option-item" id="item-give"></div>
+                    <div class="inv-option-item" id="clothing"><i class="fas fa-tshirt"></i></div>
+                </div>
+                <div class="inv-option-item" id="settings-close"><i class="fas fa-undo"></i></div>
+            </div>
+            <div class="oth-inv-container">
+                <div class="cloth"> 
+                    <i id="hat" class="fa-solid fa-hat-cowboy"></i>
+                    <br> 
+                    <i id="mask" class="fa-solid fa-masks-theater"></i>
+                    <br> 
+                    <i id="glasses" class="fa-solid fa-glasses"></i>
+                    <br> 
+                    <i id="shirt" class="fa-solid fa-shirt"></i>
+                    <br> 
+                    <i id="vest" class="fa-solid fa-vest"></i>
+                    <br> 
+                    <i id="pants" class="fa-solid fa-toilets-portable"></i>
+                    <br> 
+                    <i id="shoes" class="fa-solid fa-boot"></i>
+                    <br> 
+                    <i id="bag" class="fa-solid fa-suitcase"></i>
+                    <br> 
+                    <i id="gloves" class="fa-sharp fa-solid fa-mitten"></i>
+                    <br> 
+                    <i id="watch" class="fa-solid fa-watch"></i>
+                </div>
+                <div class="other-inventory" data-inventory="other"></div>
+            </div>
+            <div>
+                <div class="cloth-background" id="cloth-back"></div>
+            </div>
+            <div class="inv-settings">
+                <div id="settings-btn" class="menu-open-btn"><i class="fas fa-cog"></i></div>
+                <div id="hud-btn" class="hud-open-btn inv-option-item"><i class="fas fa-layer-group"></i></div>
+            </div>
+            <div> </div>
+            <div id="settings">
+                <div id="main-theme">
+                    <div class="setting-box">
+                        <div class="setting-box-label" id="main-theme-text"></div> <input type="color" id="tema" class="color-circle" name="temaValue" value="#03a2b5">
+                        <div id="main-slider"></div>
+                    </div>
+                </div>
+                <div id="border-theme">
+                    <div class="setting-box">
+                        <div class="setting-box-label" id="border-theme-text"></div> <input type="color" id="border" class="color-circle" name="borderValue" value="#c0c0c0"> <br>
+                        <div id="border-slider"></div>
+                    </div>
+                </div>
+                <div id="label-theme">
+                    <div class="setting-box">
+                        <div class="setting-box-label" id="label-theme-text"></div> <input type="color" id="slot-label" class="color-circle" name="labelValue" value="#2d7f88"><br>
+                        <div id="label-slider"></div>
+                    </div>
+                </div>
+                <div id="border-radius-theme">
+                    <div class="setting-box">
+                        <div class="setting-box-label" id="border-radius-theme-text"></div>
+                        <div id="radius-label"></div>
+                        <div class="radius-icon"></div>
+                    </div>
+                </div>
+                <div id="itemBox-theme">
+                    <div class="setting-box changePosition">
+                        <div class="setting-box-label" id="itemBox-theme-text"></div>
+                        <div class="itemBox-icon"> 
+                            <i class="fa-solid fa-arrows-maximize"></i>
+                        </div>
+                    </div>
+                </div>
+                <div id="darkness-theme">
+                    <div class="setting-box">
+                        <div class="setting-box-label" id="darkness-theme-text"></div>
+                        <div class="input_wrapper"> <input type="checkbox" class="switch_4 checkbox-item" id="darkness"> <svg class="is_checked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 426.67 426.67">
+                                <path d="M153.504 366.84c-8.657 0-17.323-3.303-23.927-9.912L9.914 237.265c-13.218-13.218-13.218-34.645 0-47.863 13.218-13.218 34.645-13.218 47.863 0l95.727 95.727 215.39-215.387c13.218-13.214 34.65-13.218 47.86 0 13.22 13.218 13.22 34.65 0 47.863L177.435 356.928c-6.61 6.605-15.27 9.91-23.932 9.91z" />
+                            </svg> <svg class="is_unchecked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212.982 212.982">
+                                <path d="M131.804 106.49l75.936-75.935c6.99-6.99 6.99-18.323 0-25.312-6.99-6.99-18.322-6.99-25.312 0L106.49 81.18 30.555 5.242c-6.99-6.99-18.322-6.99-25.312 0-6.99 6.99-6.99 18.323 0 25.312L81.18 106.49 5.24 182.427c-6.99 6.99-6.99 18.323 0 25.312 6.99 6.99 18.322 6.99 25.312 0L106.49 131.8l75.938 75.937c6.99 6.99 18.322 6.99 25.312 0 6.99-6.99 6.99-18.323 0-25.313l-75.936-75.936z" fill-rule="evenodd" clip-rule="evenodd" />
+                            </svg> </div>
+                    </div>
+                </div>
+                <div id="blur-theme">
+                    <div class="setting-box">
+                        <div class="setting-box-label" id="blur-theme-text"></div>
+                        <div class="input_wrapper"> <input type="checkbox" class="switch_4 checkbox-item" id="blur" checked> <svg class="is_checked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 426.67 426.67">
+                                <path d="M153.504 366.84c-8.657 0-17.323-3.303-23.927-9.912L9.914 237.265c-13.218-13.218-13.218-34.645 0-47.863 13.218-13.218 34.645-13.218 47.863 0l95.727 95.727 215.39-215.387c13.218-13.214 34.65-13.218 47.86 0 13.22 13.218 13.22 34.65 0 47.863L177.435 356.928c-6.61 6.605-15.27 9.91-23.932 9.91z" />
+                            </svg> <svg class="is_unchecked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212.982 212.982">
+                                <path d="M131.804 106.49l75.936-75.935c6.99-6.99 6.99-18.323 0-25.312-6.99-6.99-18.322-6.99-25.312 0L106.49 81.18 30.555 5.242c-6.99-6.99-18.322-6.99-25.312 0-6.99 6.99-6.99 18.323 0 25.312L81.18 106.49 5.24 182.427c-6.99 6.99-6.99 18.323 0 25.312 6.99 6.99 18.322 6.99 25.312 0L106.49 131.8l75.938 75.937c6.99 6.99 18.322 6.99 25.312 0 6.99-6.99 6.99-18.323 0-25.313l-75.936-75.936z" fill-rule="evenodd" clip-rule="evenodd" />
+                            </svg> </div>
+                    </div>
+                </div>
+                <div id="dimension-theme">
+                    <div class="setting-box">
+                        <div class="setting-box-label" id="dimension-theme-text"></div>
+                        <div class="input_wrapper"> <input class="checkbox-item" type="checkbox" id="3d" checked> <svg class="is_checked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 426.67 426.67">
+                                <path d="M153.504 366.84c-8.657 0-17.323-3.303-23.927-9.912L9.914 237.265c-13.218-13.218-13.218-34.645 0-47.863 13.218-13.218 34.645-13.218 47.863 0l95.727 95.727 215.39-215.387c13.218-13.214 34.65-13.218 47.86 0 13.22 13.218 13.22 34.65 0 47.863L177.435 356.928c-6.61 6.605-15.27 9.91-23.932 9.91z" />
+                            </svg> <svg class="is_unchecked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212.982 212.982">
+                                <path d="M131.804 106.49l75.936-75.935c6.99-6.99 6.99-18.323 0-25.312-6.99-6.99-18.322-6.99-25.312 0L106.49 81.18 30.555 5.242c-6.99-6.99-18.322-6.99-25.312 0-6.99 6.99-6.99 18.323 0 25.312L81.18 106.49 5.24 182.427c-6.99 6.99-6.99 18.323 0 25.312 6.99 6.99 18.322 6.99 25.312 0L106.49 131.8l75.938 75.937c6.99 6.99 18.322 6.99 25.312 0 6.99-6.99 6.99-18.323 0-25.313l-75.936-75.936z" fill-rule="evenodd" clip-rule="evenodd" />
+                            </svg> </div>
+                    </div>
+                </div>
+                <div id="quality-theme">
+                    <div class="setting-box">
+                        <div class="setting-box-label" id="quality-theme-text"></div>
+                        <div class="input_wrapper"> <input type="checkbox" class="switch_4 checkbox-item" id="qualityGizle" checked> <svg class="is_checked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 426.67 426.67">
+                                <path d="M153.504 366.84c-8.657 0-17.323-3.303-23.927-9.912L9.914 237.265c-13.218-13.218-13.218-34.645 0-47.863 13.218-13.218 34.645-13.218 47.863 0l95.727 95.727 215.39-215.387c13.218-13.214 34.65-13.218 47.86 0 13.22 13.218 13.22 34.65 0 47.863L177.435 356.928c-6.61 6.605-15.27 9.91-23.932 9.91z" />
+                            </svg> <svg class="is_unchecked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212.982 212.982">
+                                <path d="M131.804 106.49l75.936-75.935c6.99-6.99 6.99-18.323 0-25.312-6.99-6.99-18.322-6.99-25.312 0L106.49 81.18 30.555 5.242c-6.99-6.99-18.322-6.99-25.312 0-6.99 6.99-6.99 18.323 0 25.312L81.18 106.49 5.24 182.427c-6.99 6.99-6.99 18.323 0 25.312 6.99 6.99 18.322 6.99 25.312 0L106.49 131.8l75.938 75.937c6.99 6.99 18.322 6.99 25.312 0 6.99-6.99 6.99-18.323 0-25.313l-75.936-75.936z" fill-rule="evenodd" clip-rule="evenodd" />
+                            </svg> </div>
+                    </div>
+                </div>
+                <div id="sound-theme">
+                    <div class="setting-box">
+                        <div class="setting-box-label" id="sound-theme-text"></div>
+                        <div class="input_wrapper"> <input type="checkbox" class="switch_4 checkbox-item" id="sesKapa" checked> <svg class="is_checked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 426.67 426.67">
+                                <path d="M153.504 366.84c-8.657 0-17.323-3.303-23.927-9.912L9.914 237.265c-13.218-13.218-13.218-34.645 0-47.863 13.218-13.218 34.645-13.218 47.863 0l95.727 95.727 215.39-215.387c13.218-13.214 34.65-13.218 47.86 0 13.22 13.218 13.22 34.65 0 47.863L177.435 356.928c-6.61 6.605-15.27 9.91-23.932 9.91z" />
+                            </svg> <svg class="is_unchecked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212.982 212.982">
+                                <path d="M131.804 106.49l75.936-75.935c6.99-6.99 6.99-18.323 0-25.312-6.99-6.99-18.322-6.99-25.312 0L106.49 81.18 30.555 5.242c-6.99-6.99-18.322-6.99-25.312 0-6.99 6.99-6.99 18.323 0 25.312L81.18 106.49 5.24 182.427c-6.99 6.99-6.99 18.323 0 25.312 6.99 6.99 18.322 6.99 25.312 0L106.49 131.8l75.938 75.937c6.99 6.99 18.322 6.99 25.312 0 6.99-6.99 6.99-18.323 0-25.313l-75.936-75.936z" fill-rule="evenodd" clip-rule="evenodd" />
+                            </svg> </div>
+                    </div>
+                </div>
+            </div>
+            <div id="hud-left">
+                <!-- hp -->
+                <div id="hud-hp-theme">
+                    <div class="setting-box" id="hp-setting-box">
+                        <div class="setting-box-label" id="hud-hp-theme-text"></div> <label class="switch">
+                            <div class="input_wrapper"> <input type="checkbox" class="switch_4 checkbox-item" id="hp-theme" checked> <svg class="is_checked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 426.67 426.67">
+                                    <path d="M153.504 366.84c-8.657 0-17.323-3.303-23.927-9.912L9.914 237.265c-13.218-13.218-13.218-34.645 0-47.863 13.218-13.218 34.645-13.218 47.863 0l95.727 95.727 215.39-215.387c13.218-13.214 34.65-13.218 47.86 0 13.22 13.218 13.22 34.65 0 47.863L177.435 356.928c-6.61 6.605-15.27 9.91-23.932 9.91z" />
+                                </svg> <svg class="is_unchecked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212.982 212.982">
+                                    <path d="M131.804 106.49l75.936-75.935c6.99-6.99 6.99-18.323 0-25.312-6.99-6.99-18.322-6.99-25.312 0L106.49 81.18 30.555 5.242c-6.99-6.99-18.322-6.99-25.312 0-6.99 6.99-6.99 18.323 0 25.312L81.18 106.49 5.24 182.427c-6.99 6.99-6.99 18.323 0 25.312 6.99 6.99 18.322 6.99 25.312 0L106.49 131.8l75.938 75.937c6.99 6.99 18.322 6.99 25.312 0 6.99-6.99 6.99-18.323 0-25.313l-75.936-75.936z" fill-rule="evenodd" clip-rule="evenodd" />
+                                </svg> </div>
+                        </label>
+                    </div>
+                </div> <!-- armor -->
+                <div id="hud-armor-theme">
+                    <div class="setting-box" id="armor-setting-box">
+                        <div class="setting-box-label" id="hud-armor-theme-text"></div>
+                        <div class="input_wrapper"> <input type="checkbox" class="switch_4 checkbox-item" id="armor-theme" checked> <svg class="is_checked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 426.67 426.67">
+                                <path d="M153.504 366.84c-8.657 0-17.323-3.303-23.927-9.912L9.914 237.265c-13.218-13.218-13.218-34.645 0-47.863 13.218-13.218 34.645-13.218 47.863 0l95.727 95.727 215.39-215.387c13.218-13.214 34.65-13.218 47.86 0 13.22 13.218 13.22 34.65 0 47.863L177.435 356.928c-6.61 6.605-15.27 9.91-23.932 9.91z" />
+                            </svg> <svg class="is_unchecked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212.982 212.982">
+                                <path d="M131.804 106.49l75.936-75.935c6.99-6.99 6.99-18.323 0-25.312-6.99-6.99-18.322-6.99-25.312 0L106.49 81.18 30.555 5.242c-6.99-6.99-18.322-6.99-25.312 0-6.99 6.99-6.99 18.323 0 25.312L81.18 106.49 5.24 182.427c-6.99 6.99-6.99 18.323 0 25.312 6.99 6.99 18.322 6.99 25.312 0L106.49 131.8l75.938 75.937c6.99 6.99 18.322 6.99 25.312 0 6.99-6.99 6.99-18.323 0-25.313l-75.936-75.936z" fill-rule="evenodd" clip-rule="evenodd" />
+                            </svg> </div>
+                    </div>
+                </div> <!-- hunger -->
+                <div id="hud-hunger-theme">
+                    <div class="setting-box" id="hunger-setting-box">
+                        <div class="setting-box-label" id="hud-hunger-theme-text"></div>
+                        <div class="input_wrapper"> <input type="checkbox" class="switch_4 checkbox-item" id="hunger-theme" checked> <svg class="is_checked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 426.67 426.67">
+                                <path d="M153.504 366.84c-8.657 0-17.323-3.303-23.927-9.912L9.914 237.265c-13.218-13.218-13.218-34.645 0-47.863 13.218-13.218 34.645-13.218 47.863 0l95.727 95.727 215.39-215.387c13.218-13.214 34.65-13.218 47.86 0 13.22 13.218 13.22 34.65 0 47.863L177.435 356.928c-6.61 6.605-15.27 9.91-23.932 9.91z" />
+                            </svg> <svg class="is_unchecked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212.982 212.982">
+                                <path d="M131.804 106.49l75.936-75.935c6.99-6.99 6.99-18.323 0-25.312-6.99-6.99-18.322-6.99-25.312 0L106.49 81.18 30.555 5.242c-6.99-6.99-18.322-6.99-25.312 0-6.99 6.99-6.99 18.323 0 25.312L81.18 106.49 5.24 182.427c-6.99 6.99-6.99 18.323 0 25.312 6.99 6.99 18.322 6.99 25.312 0L106.49 131.8l75.938 75.937c6.99 6.99 18.322 6.99 25.312 0 6.99-6.99 6.99-18.323 0-25.313l-75.936-75.936z" fill-rule="evenodd" clip-rule="evenodd" />
+                            </svg> </div>
+                    </div>
+                </div> <!-- thirst -->
+                <div id="hud-thirst-theme">
+                    <div class="setting-box" id="thirst-setting-box">
+                        <div class="setting-box-label" id="hud-thirst-theme-text"></div>
+                        <div class="input_wrapper"> <input type="checkbox" class="switch_4 checkbox-item" id="thirst-theme" checked> <svg class="is_checked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 426.67 426.67">
+                                <path d="M153.504 366.84c-8.657 0-17.323-3.303-23.927-9.912L9.914 237.265c-13.218-13.218-13.218-34.645 0-47.863 13.218-13.218 34.645-13.218 47.863 0l95.727 95.727 215.39-215.387c13.218-13.214 34.65-13.218 47.86 0 13.22 13.218 13.22 34.65 0 47.863L177.435 356.928c-6.61 6.605-15.27 9.91-23.932 9.91z" />
+                            </svg> <svg class="is_unchecked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212.982 212.982">
+                                <path d="M131.804 106.49l75.936-75.935c6.99-6.99 6.99-18.323 0-25.312-6.99-6.99-18.322-6.99-25.312 0L106.49 81.18 30.555 5.242c-6.99-6.99-18.322-6.99-25.312 0-6.99 6.99-6.99 18.323 0 25.312L81.18 106.49 5.24 182.427c-6.99 6.99-6.99 18.323 0 25.312 6.99 6.99 18.322 6.99 25.312 0L106.49 131.8l75.938 75.937c6.99 6.99 18.322 6.99 25.312 0 6.99-6.99 6.99-18.323 0-25.313l-75.936-75.936z" fill-rule="evenodd" clip-rule="evenodd" />
+                            </svg> </div>
+                    </div>
+                </div>
+            </div>
+            <div id="hud-right">
+                <!-- hp -->
+                <div id="hud-id-theme">
+                    <div class="setting-box" id="hp-setting-box">
+                        <div class="setting-box-label" id="hud-id-theme-text"></div>
+                        <div class="input_wrapper"> <input type="checkbox" class="switch_4 checkbox-item" id="id-theme" checked> <svg class="is_checked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 426.67 426.67">
+                                <path d="M153.504 366.84c-8.657 0-17.323-3.303-23.927-9.912L9.914 237.265c-13.218-13.218-13.218-34.645 0-47.863 13.218-13.218 34.645-13.218 47.863 0l95.727 95.727 215.39-215.387c13.218-13.214 34.65-13.218 47.86 0 13.22 13.218 13.22 34.65 0 47.863L177.435 356.928c-6.61 6.605-15.27 9.91-23.932 9.91z" />
+                            </svg> <svg class="is_unchecked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212.982 212.982">
+                                <path d="M131.804 106.49l75.936-75.935c6.99-6.99 6.99-18.323 0-25.312-6.99-6.99-18.322-6.99-25.312 0L106.49 81.18 30.555 5.242c-6.99-6.99-18.322-6.99-25.312 0-6.99 6.99-6.99 18.323 0 25.312L81.18 106.49 5.24 182.427c-6.99 6.99-6.99 18.323 0 25.312 6.99 6.99 18.322 6.99 25.312 0L106.49 131.8l75.938 75.937c6.99 6.99 18.322 6.99 25.312 0 6.99-6.99 6.99-18.323 0-25.313l-75.936-75.936z" fill-rule="evenodd" clip-rule="evenodd" />
+                            </svg> </div>
+                    </div>
+                </div> <!-- money -->
+                <div id="hud-money-theme">
+                    <div class="setting-box" id="money-setting-box">
+                        <div class="setting-box-label" id="hud-money-theme-text"></div>
+                        <div class="input_wrapper"> <input type="checkbox" class="switch_4 checkbox-item" id="money-theme" checked> <svg class="is_checked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 426.67 426.67">
+                                <path d="M153.504 366.84c-8.657 0-17.323-3.303-23.927-9.912L9.914 237.265c-13.218-13.218-13.218-34.645 0-47.863 13.218-13.218 34.645-13.218 47.863 0l95.727 95.727 215.39-215.387c13.218-13.214 34.65-13.218 47.86 0 13.22 13.218 13.22 34.65 0 47.863L177.435 356.928c-6.61 6.605-15.27 9.91-23.932 9.91z" />
+                            </svg> <svg class="is_unchecked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212.982 212.982">
+                                <path d="M131.804 106.49l75.936-75.935c6.99-6.99 6.99-18.323 0-25.312-6.99-6.99-18.322-6.99-25.312 0L106.49 81.18 30.555 5.242c-6.99-6.99-18.322-6.99-25.312 0-6.99 6.99-6.99 18.323 0 25.312L81.18 106.49 5.24 182.427c-6.99 6.99-6.99 18.323 0 25.312 6.99 6.99 18.322 6.99 25.312 0L106.49 131.8l75.938 75.937c6.99 6.99 18.322 6.99 25.312 0 6.99-6.99 6.99-18.323 0-25.313l-75.936-75.936z" fill-rule="evenodd" clip-rule="evenodd" />
+                            </svg> </div>
+                    </div>
+                </div> <!-- bank -->
+                <div id="hud-bank-theme">
+                    <div class="setting-box" id="bank-setting-box">
+                        <div class="setting-box-label" id="hud-bank-theme-text"></div>
+                        <div class="input_wrapper"> <input type="checkbox" class="switch_4 checkbox-item" id="bank-theme" checked> <svg class="is_checked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 426.67 426.67">
+                                <path d="M153.504 366.84c-8.657 0-17.323-3.303-23.927-9.912L9.914 237.265c-13.218-13.218-13.218-34.645 0-47.863 13.218-13.218 34.645-13.218 47.863 0l95.727 95.727 215.39-215.387c13.218-13.214 34.65-13.218 47.86 0 13.22 13.218 13.22 34.65 0 47.863L177.435 356.928c-6.61 6.605-15.27 9.91-23.932 9.91z" />
+                            </svg> <svg class="is_unchecked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212.982 212.982">
+                                <path d="M131.804 106.49l75.936-75.935c6.99-6.99 6.99-18.323 0-25.312-6.99-6.99-18.322-6.99-25.312 0L106.49 81.18 30.555 5.242c-6.99-6.99-18.322-6.99-25.312 0-6.99 6.99-6.99 18.323 0 25.312L81.18 106.49 5.24 182.427c-6.99 6.99-6.99 18.323 0 25.312 6.99 6.99 18.322 6.99 25.312 0L106.49 131.8l75.938 75.937c6.99 6.99 18.322 6.99 25.312 0 6.99-6.99 6.99-18.323 0-25.313l-75.936-75.936z" fill-rule="evenodd" clip-rule="evenodd" />
+                            </svg> </div>
+                    </div>
+                </div> <!-- black_money -->
+                <div id="hud-black-money-theme">
+                    <div class="setting-box" id="black-money-setting-box">
+                        <div class="setting-box-label" id="hud-black-money-theme-text"></div>
+                        <div class="input_wrapper"> <input type="checkbox" class="switch_4 checkbox-item" id="black-money-theme" checked> <svg class="is_checked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 426.67 426.67">
+                                <path d="M153.504 366.84c-8.657 0-17.323-3.303-23.927-9.912L9.914 237.265c-13.218-13.218-13.218-34.645 0-47.863 13.218-13.218 34.645-13.218 47.863 0l95.727 95.727 215.39-215.387c13.218-13.214 34.65-13.218 47.86 0 13.22 13.218 13.22 34.65 0 47.863L177.435 356.928c-6.61 6.605-15.27 9.91-23.932 9.91z" />
+                            </svg> <svg class="is_unchecked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212.982 212.982">
+                                <path d="M131.804 106.49l75.936-75.935c6.99-6.99 6.99-18.323 0-25.312-6.99-6.99-18.322-6.99-25.312 0L106.49 81.18 30.555 5.242c-6.99-6.99-18.322-6.99-25.312 0-6.99 6.99-6.99 18.323 0 25.312L81.18 106.49 5.24 182.427c-6.99 6.99-6.99 18.323 0 25.312 6.99 6.99 18.322 6.99 25.312 0L106.49 131.8l75.938 75.937c6.99 6.99 18.322 6.99 25.312 0 6.99-6.99 6.99-18.323 0-25.313l-75.936-75.936z" fill-rule="evenodd" clip-rule="evenodd" />
+                            </svg> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ply-hotbar-inventory" data-inventory="hotbar"></div>
+        <div class="ply-iteminfo-container">
+            <div class="ply-iteminfo">
+                <div class="iteminfo-content">
+                    <div class="item-info-title"></div>
+                    <div class="item-info-line"></div>
+                    <div class="item-info-description"></div>
+                </div>
+            </div>
+        </div>
+        <div class="inv-background"></div>
+    </div>
+    <div class="weapon-attachments-container">
+        <div class="weapon-attachments-container-background">
+            <div class="weapon-attachments-container-title">Pistol | <span style="font-size: 2vh;">9mm</span> </div>
+            <div class="weapon-attachments"> </div>
+        </div>
+        <div class="weapon-attachments-container-details"><span style="font-weight: bold; letter-spacing: .1vh;">Serial number</span><br>12345678<br><br><span style="font-weight: bold; letter-spacing: .1vh;">Robustness</span>
+            <div class="weapon-attachments-container-detail-durability">
+                <div class="weapon-attachments-container-detail-durability-total"></div>
+            </div>
+        </div> <!-- <img src="./attachment_images/weapon_pistol.png" class="weapon-attachments-container-image"> --> <canvas id="attachment-canvas" width="300" height="300"></canvas>
+        <div class="weapon-attachments-lines">
+            <div class="weapon-attachments-line">
+                <div class="attachmentItem-container">
+                    <div class="weapon-attachment-label">
+                        <p>Demper</p>
+                    </div>
+                    <div class="weapon-attachment-img"><img src="./images/pistol_suppressor.png"></div>
+                </div>
+            </div>
+        </div>
+        <div class="weapon-attachments-weaponContainer" onmousedown="openWeaponRotate(event)" onmouseup="closeWeaponRotate(event)" onmousemove="weaponMouseMove(event)"></div>
+        <div class="weapon-attachments-remove"><i class="fas fa-trash"></i></div>
+        <div class="weapon-attachments-back">
+            <p>EXIT</p>
+        </div>
+    </div>
+    <div class="combine-option-container">
+        <div class="btn-combine CombineItem">
+            <p>COMBINE</p>
+        </div>
+    </div>
+    <div class="itemboxes-container">
+        <div class="itembox-label" id="itembox-label "></div>
+    </div>
+    <div class="itembox-container template"></div>
+    <div class="requiredItem-container"> </div>
+    <div class="z-hotbar-inventory"></div>
+    <div id="dialog" title="Nearby Players:">
+        <div id="nearPlayers"> </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+    <script src="../config/config_metadata.js" type="text/javascript"></script>
+    <script src="debounce.min.js" type="text/javascript"></script>
+</body>
+
+</html>

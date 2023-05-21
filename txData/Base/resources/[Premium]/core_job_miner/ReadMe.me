@@ -1,0 +1,54 @@
+--You need 3 scripts for this to work by default.
+
+CORE_JOB_MINER
+CORE_JOB_CRAFTINGMENU
+CORE_MARKERMENU
+
+--FRAMEWORK
+
+Go to CORE_JOB_CRAFTINGMENU config and change it to your framework | cfg.framework = "esx" ...
+Go to CORE_JOB_MINER and change it to your framework | cfg.framework = "esx" ...
+
+--PICKAXE MODEL
+
+You will enconter a pickaxe model that replaces the default w_me_battleaxe you need to put that in a stream folder, dont create a stream folder in this resource. MAY RESULT IN CRASH
+
+--Images
+
+All the images are in the CORE_JOB_CRAFTINGMENU resource, in the html/icons folder.
+
+--Items
+
+--ESX
+
+INSERT INTO items (name, label, weight, rare, can_remove) VALUES
+('stone_rock', 'Stone Rock', 1, 0, 1),
+('carbon_rock', 'Carbon Rock', 1, 0, 1),
+('iron_rock', 'Iron Rock', 1, 0, 1),
+('gold_rock', 'Gold Rock', 1, 0, 1),
+('carbon_metal', 'Carbon Metal', 1, 0, 1),
+('iron_metal', 'Iron Metal', 1, 0, 1),
+('gold_metal', 'Gold Metal', 1, 0, 1),
+('weapon_melee_pickaxe', 'Pickaxe', 1, 0, 1),
+
+--QBCORE
+
+['stone_rock'] = {['name'] = 'stone_rock',['label'] = 'Stone Rock',['weight'] = 0,['type'] = 'item',['image'] = 'stone_rock.png',['unique'] = false,['useable'] = false,['shouldClose'] = false,['combinable'] = nil,['description'] = 'Stone Rock, mined from a rock'},
+['carbon_rock'] = {['name'] = 'carbon_rock',['label'] = 'Carbon Rock',['weight'] = 0,['type'] = 'item',['image'] = 'carbon_rock.png',['unique'] = false,['useable'] = false,['shouldClose'] = false,['combinable'] = nil,['description'] = 'Carbon Rock, mined from a rock'},
+['iron_rock'] = {['name'] = 'iron_rock',['label'] = 'Iron Rock',['weight'] = 0,['type'] = 'item',['image'] = 'iron_rock.png',['unique'] = false,['useable'] = false,['shouldClose'] = false,['combinable'] = nil,['description'] = 'Iron Rock, mined from a rock'},
+['gold_rock'] = {['name'] = 'gold_rock',['label'] = 'Gold Rock',['weight'] = 0,['type'] = 'item',['image'] = 'gold_rock.png',['unique'] = false,['useable'] = false,['shouldClose'] = false,['combinable'] = nil,['description'] = 'Gold Rock, mined from a rock'},
+['carbon_metal'] = {['name'] = 'carbon_metal',['label'] = 'Carbon Metal',['weight'] = 0,['type'] = 'item',['image'] = 'carbon_metal.png',['unique'] = false,['useable'] = false,['shouldClose'] = false,['combinable'] = nil,['description'] = 'Carbon Metal, processed from raw Carbon'},
+['iron_metal'] = {['name'] = 'iron_metal',['label'] = 'Iron Metal',['weight'] = 0,['type'] = 'item',['image'] = 'iron_metal.png',['unique'] = false,['useable'] = false,['shouldClose'] = false,['combinable'] = nil,['description'] = 'Iron Metal, processed from raw Iron'},
+['gold_metal'] = {['name'] = 'gold_metal',['label'] = 'Gold Metal',['weight'] = 0,['type'] = 'item',['image'] = 'gold_metal.png',['unique'] = false,['useable'] = false,['shouldClose'] = false,['combinable'] = nil,['description'] = 'Gold Metal, processed from raw Gold'},
+['weapon_melee_pickaxe'] = {['name'] = 'weapon_melee_pickaxe',['label'] = 'Pickaxe',['weight'] = 0,['type'] = 'weapon',['ammotype'] = nil,['image'] = 'weapon_melee_pickaxe.png',['unique'] = true,['useable'] = false,['description'] = 'An Pickaxe'},
+
+--vRP & vRPEX
+
+['stone_rock'] = {'Stone Rock', 'Stone Rock, mined from a rock.', nil, 1},
+['carbon_rock'] = {'Carbon Rock', 'Carbon Rock, mined from a rock.', nil, 1},
+['iron_rock'] = {'Iron Rock', 'Iron Rock, mined from a rock.', nil, 1},
+['gold_rock'] = {'Gold Rock', 'Gold Rock, mined from a rock.', nil, 1},
+['carbon_metal'] = {'Carbon Metal', 'Carbon Metal, processed from raw Carbon.', nil, 1},
+['iron_metal'] = {'Iron Metal', 'Iron Metal, processed from raw Iron.', nil, 1},
+['gold_metal'] = {'Gold Metal', 'Gold Metal, processed from raw Gold.', nil, 1},
+['weapon_melee_pickaxe'] = {'Pickaxe', 'An Pickaxe.', nil, 1},

@@ -1,0 +1,50 @@
+--You need 3 scripts for this to work by default.
+
+CORE_JOB_HUNTER
+CORE_JOB_CRAFTINGMENU
+CORE_MARKERMENU
+
+--FRAMEWORK
+
+Go to CORE_JOB_CRAFTINGMENU config and change it to your framework | cfg.framework = "esx" ...
+Go to CORE_JOB_HUNTER and change it to your framework | cfg.framework = "esx" ...
+
+--Images
+
+All the images are in the CORE_JOB_CRAFTINGMENU resource, in the html/icons folder.
+
+--Items
+
+--ESX
+
+INSERT INTO items (name, label, weight, rare, can_remove) VALUES
+('hunter_meat_boar', 'Boar Meat', 1, 0, 1),
+('hunter_meat_deer', 'Deer Meat', 1, 0, 1),
+('hunter_meat_chicken', 'Chicken Meat', 1, 0, 1),
+('hunter_meat_lion', 'Lion Meat', 1, 0, 1),
+('hunter_animal_fat', 'Animal Fat', 1, 0, 1),
+('hunter_animal_cloth', 'Animal Cloth', 1, 0, 1),
+('hunter_animal_leather', 'Animal Leather', 1, 0, 1),
+('hunter_animal_bonefragments', 'Animal Bone Fragments', 1, 0, 1),
+
+--QBCORE
+
+['hunter_meat_boar'] = {['name'] = 'hunter_meat_boar',['label'] = 'Boar Meat',['weight'] = 0,['type'] = 'item',['image'] = 'hunter_meat_boar.png',['unique'] = false,['useable'] = false,['shouldClose'] = false,['combinable'] = nil,['description'] = 'Boar Meat, skinned from a boar.'},
+['hunter_meat_deer'] = {['name'] = 'hunter_meat_deer',['label'] = 'Deer Meat',['weight'] = 0,['type'] = 'item',['image'] = 'hunter_meat_deer.png',['unique'] = false,['useable'] = false,['shouldClose'] = false,['combinable'] = nil,['description'] = 'Deer Meat, skinned from a deer.'},
+['hunter_meat_chicken'] = {['name'] = 'hunter_meat_chicken',['label'] = 'Chicken Meat',['weight'] = 0,['type'] = 'item',['image'] = 'hunter_meat_chicken.png',['unique'] = false,['useable'] = false,['shouldClose'] = false,['combinable'] = nil,['description'] = 'Chicken Meat, skinned from a chicken.'},
+['hunter_meat_lion'] = {['name'] = 'hunter_meat_lion',['label'] = 'Lion Meat',['weight'] = 0,['type'] = 'item',['image'] = 'hunter_meat_lion.png',['unique'] = false,['useable'] = false,['shouldClose'] = false,['combinable'] = nil,['description'] = 'Lion Meat, skinned from a lion.'},
+['hunter_animal_fat'] = {['name'] = 'hunter_animal_fat',['label'] = 'Animal Fat',['weight'] = 0,['type'] = 'item',['image'] = 'hunter_animal_fat.png',['unique'] = false,['useable'] = false,['shouldClose'] = false,['combinable'] = nil,['description'] = 'Animal Fat, skinned from an animal.'},
+['hunter_animal_cloth'] = {['name'] = 'hunter_animal_cloth',['label'] = 'Animal Cloth',['weight'] = 0,['type'] = 'item',['image'] = 'hunter_animal_cloth.png',['unique'] = false,['useable'] = false,['shouldClose'] = false,['combinable'] = nil,['description'] = 'Animal Cloth, skinned from an animal.'},
+['hunter_animal_leather'] = {['name'] = 'hunter_animal_leather',['label'] = 'Animal Leather',['weight'] = 0,['type'] = 'item',['image'] = 'hunter_animal_leather.png',['unique'] = false,['useable'] = false,['shouldClose'] = false,['combinable'] = nil,['description'] = 'Animal Leather, skinned from an animal.'},
+['hunter_animal_bonefragments'] = {['name'] = 'hunter_animal_bonefragments',['label'] = 'Animal Bone Fragments',['weight'] = 0,['type'] = 'item',['image'] = 'hunter_animal_bonefragments.png',['unique'] = false,['useable'] = false,['shouldClose'] = false,['combinable'] = nil,['description'] = 'Animal Bone Fragments, skinned from an animal.'},
+
+--vRP & vRPEX
+
+['hunter_meat_boar'] = {'Boar Meat', 'Boar Meat, skinned from a boar.', nil, 1},
+['hunter_meat_deer'] = {'Deer Meat', 'Deer Meat, skinned from a deer.', nil, 1},
+['hunter_meat_chicken'] = {'Chicken Meat', 'Chicken Meat, skinned from a chicken.', nil, 1},
+['hunter_meat_lion'] = {'Lion Meat', 'Lion Meat, skinned from a lion.', nil, 1},
+['hunter_animal_fat'] = {'Animal Fat', 'Animal Fat, skinned from an animal.', nil, 1},
+['hunter_animal_cloth'] = {'Animal Cloth', 'Animal Cloth, skinned from an animal.', nil, 1},
+['hunter_animal_leather'] = {'Animal Leather', 'Animal Leather, skinned from an animal.', nil, 1},
+['hunter_animal_bonefragments'] = {'Animal Bone Fragments', 'Animal Bone Fragments, skinned from an animal.', nil, 1},

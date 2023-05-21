@@ -1,0 +1,185 @@
+<html>
+
+<head>
+    <title>UP Roleplay</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <video autoplay muted loop>
+        <source src="img/NaturalLoadscreenFinal.mp4" type="video/mp4">
+    </video>
+    <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+            <i class="fa-solid fa-music"></i>
+            <span></span>
+        </label>
+
+        <ul class="menu__box">
+            <div id="app-cover">
+                <div id="player">
+                    <div id="player-track">
+                        <div id="album-name"></div>
+                        <div id="track-name"></div>
+                        <div id="track-time">
+                            <div id="current-time"></div>
+                            <div id="track-length"></div>
+                        </div>
+                        <div id="s-area">
+                            <div id="ins-time"></div>
+                            <div id="s-hover"></div>
+                            <div id="seek-bar"></div>
+                        </div>
+                    </div>
+                    <div id="player-content">
+                        <div id="album-art">
+                            <img src="https://i.imgur.com/XVTk5Wa.jpg" class="active" id="_1" />
+                            <img src="https://i.imgur.com/qWob5Yf.png" class="active" id="_2" />
+                            <img src="https://i.imgur.com/e6oGV0v.jpg" id="_3" />
+                            <img src="https://i.imgur.com/hP0pSWH.jpg" id="_4" />
+                            <img src="https://i.imgur.com/Ht5bOab.jpg" id="_5" />
+                            <img src="https://i.imgur.com/OVjSWco.jpg" id="_6" />
+                            <div id="buffer-box">Loading ...</div>
+                        </div>
+                        <div id="player-controls">
+                            <div class="control">
+                                <div class="button" id="play-previous">
+                                    <i class="fas fa-backward"></i>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="button" id="play-pause-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="button" id="play-next">
+                                    <i class="fas fa-forward"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ul>
+    </div>
+    <style>
+        * {
+            cursor: none;
+        }
+
+        #cursor {
+            position: fixed;
+            z-index: 9999999;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        line,
+        circle {
+            stroke: url("#gradient");
+            stroke-width: 3;
+            transform-origin: 50% 50%;
+            opacity: 1;
+        }
+
+        line {
+            animation: op-1 2s ease-out infinite;
+        }
+
+        circle {
+            animation: op-1 2s ease-out 1s infinite,
+                op-2 2s ease-out 1s infinite;
+        }
+
+        @-moz-keyframes op-1 {
+            50% {
+                opacity: 0.1;
+                transform: rotate(7200deg);
+            }
+        }
+
+        @-webkit-keyframes op-1 {
+            50% {
+                opacity: 0.1;
+                transform: rotate(7200deg);
+            }
+        }
+
+        @-o-keyframes op-1 {
+            50% {
+                opacity: 0.1;
+                transform: rotate(7200deg);
+            }
+        }
+
+        @keyframes op-1 {
+            50% {
+                opacity: 0.1;
+                transform: rotate(7200deg);
+            }
+        }
+
+        @-moz-keyframes op-2 {
+            50% {
+                transform: scale(0.2);
+            }
+        }
+
+        @-webkit-keyframes op-2 {
+            50% {
+                transform: scale(0.2);
+            }
+        }
+
+        @-o-keyframes op-2 {
+            50% {
+                transform: scale(0.2);
+            }
+        }
+
+        @keyframes op-2 {
+            50% {
+                transform: scale(0.2);
+            }
+        }
+
+        .slide-website::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <svg class="cursor" id="cursor" width="30" height="30">
+        <defs>
+            <linearGradient id="gradient" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#1b8ada"></stop>
+                <stop offset="100%" stop-color="#2f02f5"></stop>
+            </linearGradient>
+        </defs>
+        <circle r="13" cx="15" cy="15" fill="none"></circle>
+        <line x1="0" y1="0" x2="30" y2="30"></line>
+        <line x1="0" y1="30" x2="30" y2="0"></line>
+    </svg>
+    <script>
+        var t = document.getElementById("cursor");
+
+        $("body").mousemove(function (event) {
+            t.style.left = event.pageX + "px";
+            t.style.top = event.pageY + "px";
+        });
+    </script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

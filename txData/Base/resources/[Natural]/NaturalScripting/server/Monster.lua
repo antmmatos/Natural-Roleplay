@@ -1,0 +1,6 @@
+ESX.RegisterUsableItem("monster", function(source)
+    local xPlayer = ESX.GetPlayerFromId(source)
+    xPlayer.removeInventoryItem("monster", 1)
+    TriggerClientEvent('esx_basicneeds:onUse', source, "drink")
+    TriggerClientEvent("Natural:Client:Monster", source)
+end)

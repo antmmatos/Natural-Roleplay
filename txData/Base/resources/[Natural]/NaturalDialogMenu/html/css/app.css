@@ -1,0 +1,353 @@
+#controls {
+  font-family: 'Poppins';
+  color: #fff;
+  position: absolute;
+  bottom: 40;
+  right: 40;
+}
+
+.controls {
+  display: none;
+}
+
+.dialog {
+  font-family: 'Poppins';
+  position: relative;
+  color: white;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 220px;
+  transform: translate(-50%, -50%);
+  /*background-color: black;*/
+  /*background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);*/
+  background: linear-gradient(317deg, rgba(0, 0, 0, 1) 0%, rgba(22, 22, 22, 1) 18%, rgba(29, 29, 29, 1) 48%, rgba(22, 22, 22, 1) 80%, rgba(0, 0, 0, 1) 100%);
+  text-shadow: 0px 0px 5px white;
+  border-radius: 8px;
+  border: 1px solid white;
+  animation: fadeIn .8s;
+}
+
+
+.menu-head {
+  /*background-color: black;*/
+  margin-top: 25px;
+  margin-bottom: 5px;
+  margin-left: 1%;
+  font-family: arial;
+  text-align: center;
+  color: #fcf8f8;
+  font-weight: normal;
+  line-height: 35px;
+  font-size: 1.2rem;
+
+  animation: shake 5.0s linear forwards;
+
+}
+
+svg {
+  color: black;
+  animation: spinner 8s ease infinite;
+}
+
+.subtitle {
+  margin-top: 10px;
+  margin-left: 11%;
+  text-align: left;
+  color: white;
+  font-family: 'Poppins';
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.head {
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+}
+
+.dialog.big {
+  height: 200px;
+}
+
+.dialog .head {
+  /*background-color: #ffffff;*/
+  text-align: center;
+  height: 40px;
+}
+
+.dialog .head span::before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.dialog input[type="text"] {
+  width: 84%;
+  height: 32px;
+  outline: 0;
+  background: transparent;
+  border-radius: 5px;
+  border: solid #ffffff;
+  border-width: 0.02px;
+  margin-top: 10px;
+  margin-left: 25px;
+  margin-right: 25px;
+  color: #ffffff;
+  font-weight: bold;
+  position: relative;
+
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+}
+
+
+.dialog textarea {
+  width: 100%;
+  height: 128px;
+}
+
+
+.dialog button {
+  margin-top: 8%;
+  margin-left: 28%;
+  text-align: center;
+  width: 130px;
+  height: 40px;
+  color: black;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+
+  outline: none;
+
+  background: white;
+
+
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+
+.dialog button:before,
+.dialog button:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  /*background: rgba(2,126,251,1);*/
+  background: rgba(255, 162, 0, 1);
+  transition: all 0.3s ease;
+}
+
+.dialog button:before {
+  height: 0%;
+  width: 2px;
+}
+
+.dialog button:after {
+  width: 0%;
+  height: 2px;
+}
+
+.dialog button:hover {
+  background: transparent;
+  box-shadow: none;
+}
+
+.dialog button:hover:before {
+  height: 100%;
+}
+
+.dialog button:hover:after {
+  width: 100%;
+}
+
+.dialog span:hover {
+  color: white;
+
+  /**color: rgba(2,126,251,1);**/
+}
+
+.dialog span:before,
+.dialog span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  /*background: rgba(2,126,251,1);*/
+  background: rgba(255, 162, 0, 1);
+  transition: all 0.3s ease;
+}
+
+.dialog span:before {
+  width: 2px;
+  height: 0%;
+}
+
+.dialog span:after {
+  width: 0%;
+  height: 2px;
+}
+
+.dialog span:hover:before {
+  height: 100%;
+}
+
+.dialog span:hover:after {
+  width: 100%;
+}
+
+/**
+.dialog button {
+	font-family: 'Poppins';
+	text-align: center;
+	margin-top: 30px;
+	border: 0;
+	height: 29px;
+	color: rgb(250, 250, 250);
+	font-weight: bold;
+	position: relative;
+	width: 20%;
+	border-radius: 3px;
+	outline: 0;
+}
+
+.dialog button[name="submit"] {
+  margin-left: 40%;
+  background-color: #027302;
+  transition: all 300ms;
+}
+
+.dialog button[name="submit"]:hover {
+ 
+  transform: scale(1.1);
+}
+**/
+
+.head::before,
+.head::after {
+  content: "";
+  flex-grow: 1;
+  background: #1f2533;
+  height: 2px;
+  margin: 0px 3px;
+}
+
+@keyframes shake {
+
+  5%,
+  15%,
+  25%,
+  35%,
+  55%,
+  65%,
+  75%,
+  95% {
+    filter: blur(0.018em);
+    text-shadow:
+      0 0 0 #0c2ffb,
+      0 0 0 #2cfcfd,
+      0 0 0 #fb203b,
+      0 0 0 #fefc4b;
+
+  }
+
+  10%,
+  30%,
+  40%,
+  50%,
+  70%,
+  80%,
+  90% {
+    filter: blur(0.01em);
+    text-shadow:
+      0 0.125em 0 #0c2ffb,
+      0 0.25em 0 #2cfcfd,
+      0 -0.125em 0 #fb203b,
+      0 -0.25em 0 #fefc4b;
+
+  }
+
+  20%,
+  60% {
+    filter: blur(0.03em);
+    text-shadow:
+      0 -0.0625em 0 #0c2ffb,
+      0 -0.125em 0 #2cfcfd,
+      0 0.0625em 0 #fb203b,
+      0 0.125em 0 #fefc4b;
+
+  }
+
+  45%,
+  85% {
+    filter: blur(0.03em);
+    text-shadow:
+      0 0.03125em 0 #0c2ffb,
+      0 0.0625em 0 #2cfcfd,
+      0 -0.03125em 0 #fb203b,
+      0 -0.0625em 0 #fefc4b;
+
+  }
+
+  100% {
+    filter: blur(0.007em);
+    text-shadow:
+      0 0 0 #0c2ffb,
+      0 0 0 #2cfcfd,
+      0 0 0 #fb203b,
+      0 0 0 #fefc4b;
+
+  }
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+
+    opacity: 0;
+  }
+
+  10% {
+
+    opacity: 0.2;
+  }
+
+  20% {
+
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  70% {
+    opacity: 0.5;
+
+  }
+
+  80% {
+    opacity: 0.7;
+
+  }
+
+  100% {
+    opacity: 0.9;
+
+  }
+}

@@ -1,0 +1,5 @@
+ESX.RegisterUsableItem('bandage', function(source)
+    local xPlayer = ESX.GetPlayerFromId(source)
+    xPlayer.removeInventoryItem('bandage', 1)
+    TriggerClientEvent('Natural:Client:Bandage', source)
+end)

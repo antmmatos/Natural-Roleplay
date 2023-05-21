@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Counter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@3.8.2/dist/chart.min.js"></script>
+    <script type="text/javascript" src="script/momentJS.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js" type="text/javascript"></script>
+    <script src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vflJJaNgk/www-widgetapi.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+</head>
+
+<body>
+    <h1 id="counter"
+        style="margin: 0; padding: 0; position: absolute; top: 1.5%; right: 1.5%; color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+    </h1>
+    <div class="MainDiv">
+        <div class="player">
+            <img src="https://cdn.discordapp.com/attachments/759124930289074176/1003345808688685086/logo.png">
+            <h3>{playerName} Wallet</h3>
+        </div>
+        <div class="cryptoList">
+
+        </div>
+    </div>
+    <div class="CryptoDiv">
+        <img class="CryptoImageData Inline" src="" alt="" />
+        <h2 class="Inline" id="cryptoName">{cryptoName}</h2>
+        <div
+            style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; margin-top: -20px;">
+            <h2 id="Balance">Balance: ₿ 0.001237 (≈ €18,000)</h2>
+            <h2 id="Price">Price: ₿ 0.00000</h2>
+        </div>
+        <div id="buttonList" class="buttonList">
+
+        </div>
+        <div class="GraphDiv">
+            <canvas id="Canvas">
+            </canvas>
+        </div>
+    </div>
+    <div class="container">
+        <div class="bar-container">
+            <div class="bar-check"><span>E</span></div>
+            <div class="bar-total"></div>
+        </div>
+    </div>
+    <div id="menu-list">
+    </div>
+    <div id="mydj">
+        <img id="backgroundWallpaper" src="img/djpult.png" alt="Check img-folder!">
+
+        <div id="console">
+            <p id="currentPlaying">Currently playing:</p>
+            <div id="screen">
+                <p id="currentSong"></p>
+            </div>
+            <div id="timeLineOutside">
+                <div id="timeLineInside"></div>
+            </div>
+            <p id="timestamp"><span id="currentTime">--:--</span><span id="slash"> / </span><span
+                    id="maxTime">--:--</span></p>
+            <textarea id="linkInput" name="LOLOL" rows="4" cols="50" placeholder="Insert link here..."></textarea>
+        </div>
+
+        <button id="addToPlaylist">Add to playlist</button>
+        <button id="directPlay">Play</button>
+        <div id="addPlaylist"></div>
+        <div id="buttons">
+            <div id="buttonOne" class="button"><button class="PlayButton"></button></div>
+            <div id="buttonTwo" class="button"><i class="fas fa-undo-alt"></i></div>
+            <div id="buttonThree" class="button"><i class="fas fa-redo-alt"></i></div>
+            <div id="buttonFour" class="button"><i class="fas fa-volume-down"></i></div>
+            <div id="buttonFive" class="button"><i class="fas fa-volume-up"></i></div>
+            <div id="buttonSix" class="button"></div>
+            <div id="buttonSeven" class="button"></div>
+        </div>
+
+        <div id="playlistsSpace">
+            <textarea id="CreatePlaylistName" name="LOLOL" rows="1" cols="50" placeholder="Playlistname..."></textarea>
+            <i id="PlayListAddButton" class="fas fa-plus"></i>
+            <div class="playlist" id="songhistorySpace" data-id="1">
+                <button id="playlistsonghistory" class="playlistButton">Songhistory</button>
+                <div id="songSpacesonghistory" class="songs" data-id="songhistory" data-displayed="0">
+                </div>
+            </div>
+            <div id="playlists"></div>
+        </div>
+    </div>
+    <script src="script.js" type="text/javascript"></script>
+    <script src="crypto.js" type="text/javascript"></script>
+    <script src="skillbar.js" type="text/javascript"></script>
+    <script src="menu.js" type="text/javascript"></script>
+    <script>
+        var audioPlayer = null;
+        // Listen for NUI Messages.
+        window.addEventListener('message', function (event) {
+            // Check for playSound transaction
+            if (event.data.transactionType == "playSound") {
+
+                if (audioPlayer != null) {
+                    audioPlayer.pause();
+                }
+
+                audioPlayer = new Howl({ src: ["./sounds/" + event.data.transactionFile + ".ogg"] });
+                audioPlayer.volume(event.data.transactionVolume);
+                audioPlayer.play();
+
+            }
+        });
+    </script>
+    <script src="functions.js" type="text/javascript"></script>
+    <script src="SoundPlayer.js" type="text/javascript"></script>
+    <script src="listener.js" type="text/javascript"></script>
+    <script src="mydj.js"></script>
+</body>
+
+</html>

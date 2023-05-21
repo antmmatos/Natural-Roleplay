@@ -1,0 +1,48 @@
+{
+  "global": {
+    "serverName": "Natural RP",
+    "language": "pt",
+    "menuEnabled": true,
+    "menuAlignRight": false,
+    "menuPageKey": "Tab",
+    "hideDefaultAnnouncement": false,
+    "hideDefaultDirectMessage": false,
+    "hideDefaultWarning": false,
+    "hideDefaultScheduledRestartWarning": false
+  },
+  "logger": {},
+  "monitor": {
+    "restarterSchedule": [
+      "04:00",
+      "16:00"
+    ],
+    "resourceStartingTolerance": 180
+  },
+  "playerDatabase": {
+    "onJoinCheckBan": true,
+    "whitelistMode": "guildRoles",
+    "whitelistedDiscordRoles": [
+      "1092570886164467852"
+    ],
+    "whitelistRejectionMessage": "É necessário estar no Discord para entrar no servidor.\nDiscord: https://discord.gg/CJW4faQVpC",
+    "requiredBanHwidMatches": 1,
+    "banRejectionMessage": "Caso consideres isto como um erro, por favor entra no Discord para falares com a equipa Administrativa.\nDiscord: https://discord.gg/CJW4faQVpC"
+  },
+  "webServer": {
+    "disableNuiSourceCheck": false
+  },
+  "discordBot": {
+    "enabled": true,
+    "embedJson": "{\n  \"title\": \"{{serverName}}\",\n  \"url\": \"{{serverBrowserUrl}}\",\n  \"description\": \"You can configure this embed in `txAdmin > Settings > Discord Bot`, and edit everything from it (except footer).\",\n  \"fields\": [\n    {\n      \"name\": \"> STATUS\",\n      \"value\": \"```\\n{{statusString}}\\n```\",\n      \"inline\": true\n    },\n    {\n      \"name\": \"> PLAYERS\",\n      \"value\": \"```\\n{{serverClients}}/{{serverMaxClients}}\\n```\",\n      \"inline\": true\n    },\n    {\n      \"name\": \"> CONNECT PELO F8\",\n      \"value\": \"```\\nconnect naturalroleplay.com\\n```\"\n    },\n    {\n      \"name\": \"> PRÓXIMO RESTART\",\n      \"value\": \"```\\n{{nextScheduledRestart}}\\n```\",\n      \"inline\": true\n    },\n    {\n      \"name\": \"> UPTIME\",\n      \"value\": \"```\\n{{uptime}}\\n```\",\n      \"inline\": true\n    }\n  ],\n  \"image\": {\n    \"url\": \"https://i.imgur.com/C3D3CTW.png\"\n  },\n  \"thumbnail\": {\n    \"url\": \"https://i.imgur.com/HcF1M85.png\"\n  }\n}",
+    "embedConfigJson": "{\n  \"onlineString\": \"🟢 Online\",\n  \"onlineColor\": \"#0BA70B\",\n  \"partialString\": \"🟡 Partial\",\n  \"partialColor\": \"#FFF100\",\n  \"offlineString\": \"🔴 Offline\",\n  \"offlineColor\": \"#A70B28\",\n  \"buttons\": [\n    {\n      \"emoji\": \"1062338355909640233\",\n      \"label\": \"Connectar\",\n      \"url\": \"{{serverJoinUrl}}\"\n    }\n  ]\n}",
+    "token": "MTAzNTI2NjY2MTMyODA5MzI3Ng.GGiAkY.u-J8kPCdICs0VHj5AnByTstUkCYdwNWeU6AGUw",
+    "guild": "1092570886164467846",
+    "announceChannel": false
+  },
+  "fxRunner": {
+    "serverDataPath": "C:/Users/Administrator/Desktop/NaturalRP/txData/Base/",
+    "cfgPath": "C:/Users/Administrator/Desktop/NaturalRP/txData/Base/server.cfg",
+    "onesync": "on",
+    "autostart": true
+  }
+}

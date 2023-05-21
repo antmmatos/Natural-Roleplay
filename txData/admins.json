@@ -1,0 +1,159 @@
+[
+  {
+    "name": "SrD4rkOficial",
+    "master": true,
+    "password_hash": "$2a$11$6gMzkIsAR2PX5ENm9oRGJuUvAExv5YoNi3n5504TkoUY/85N7BNS.",
+    "providers": {
+      "citizenfx": {
+        "id": "SrD4rkOficial",
+        "identifier": "fivem:5118848",
+        "data": {
+          "sub": "90e5d40cd1838e49a53844b9e4813caf",
+          "nameid": "https://forum.cfx.re/internal/user/5118848",
+          "name": "SrD4rkOficial",
+          "picture": "https://forum.cfx.re/user_avatar/forum.cfx.re/srd4rkoficial/256/2065690_2.png",
+          "profile": "https://forum.cfx.re/u/SrD4rkOficial"
+        }
+      },
+      "discord": {
+        "id": "892504906576048138",
+        "identifier": "discord:892504906576048138",
+        "data": {}
+      }
+    },
+    "permissions": []
+  },
+  {
+    "name": "Costa",
+    "master": false,
+    "password_hash": "$2a$11$LhsOdlofrAbk2zQGRUIB8Ov.CfXE0ysiPqcb7YoZlupIs9OLjBSa.",
+    "password_temporary": true,
+    "providers": {
+      "citizenfx": {
+        "id": "GoncaloCosta",
+        "identifier": "fivem:4231042",
+        "data": {
+          "sub": "14a36676f905bebdc3bd0a76a989f2fc",
+          "nameid": "https://forum.cfx.re/internal/user/4231042",
+          "name": "GoncaloCosta",
+          "picture": "https://forum.cfx.re/user_avatar/forum.cfx.re/goncalocosta/256/3551808_2.png",
+          "profile": "https://forum.cfx.re/u/GoncaloCosta"
+        }
+      },
+      "discord": {
+        "id": "336212569293455361",
+        "identifier": "discord:336212569293455361",
+        "data": {}
+      }
+    },
+    "permissions": [
+      "all_permissions"
+    ]
+  },
+  {
+    "name": "Mycryy_1337",
+    "master": false,
+    "password_hash": "$2a$11$bz1Qocoh9auIFAaJlh1ObO0vAAdvtS.rO.dIVkqNz6Ac8PgHGSQea",
+    "password_temporary": true,
+    "providers": {
+      "discord": {
+        "id": "690267845820547160",
+        "identifier": "discord:690267845820547160",
+        "data": {}
+      }
+    },
+    "permissions": [
+      "all_permissions"
+    ]
+  },
+  {
+    "name": "ngdestin",
+    "master": false,
+    "password_hash": "$2a$11$xBw5SWs7eoya9jwFTaPRreb1veeuEGI8OlS9yAmSkiId8NFDfn1v2",
+    "password_temporary": true,
+    "providers": {
+      "discord": {
+        "id": "344825523496550411",
+        "identifier": "discord:344825523496550411",
+        "data": {}
+      }
+    },
+    "permissions": [
+      "all_permissions"
+    ]
+  },
+  {
+    "name": "jlss",
+    "master": false,
+    "password_hash": "$2a$11$BpT9HgP3pqwnPWjh/jpNY.baLlTS714Q71GGH7wecAYXQzGFduhLu",
+    "password_temporary": true,
+    "providers": {
+      "discord": {
+        "id": "366307512540069890",
+        "identifier": "discord:366307512540069890",
+        "data": {}
+      }
+    },
+    "permissions": [
+      "all_permissions"
+    ]
+  },
+  {
+    "name": "ESCURO",
+    "master": false,
+    "password_hash": "$2a$11$wjkhpnAfiuKC9bQAtvKfVeFU1kSi2fq.Ip995nPIY9AfL/R2nB4g2",
+    "password_temporary": true,
+    "providers": {
+      "discord": {
+        "id": "451451203466035210",
+        "identifier": "discord:451451203466035210",
+        "data": {}
+      }
+    },
+    "permissions": [
+      "all_permissions"
+    ]
+  },
+  {
+    "name": "topg",
+    "master": false,
+    "password_hash": "$2a$11$HxjjZMO4h562niaDwM2q9.Fbd1Nzq45I09B6JMqqbEL8BIy1FaaxS",
+    "password_temporary": true,
+    "providers": {
+      "citizenfx": {
+        "id": "Adri-20",
+        "identifier": "fivem:4691747",
+        "data": {}
+      },
+      "discord": {
+        "id": "509112697858686996",
+        "identifier": "discord:509112697858686996",
+        "data": {}
+      }
+    },
+    "permissions": [
+      "all_permissions"
+    ]
+  },
+  {
+    "name": "ngkinderovo",
+    "master": false,
+    "password_hash": "$2a$11$JmpXRQK5M1oHjsTrOaJRa.kcMNJj0lcxqIsV7ekBrFQYdkrMFso4O",
+    "password_temporary": true,
+    "providers": {
+      "citizenfx": {
+        "id": "SUPRA17",
+        "identifier": "fivem:5384693",
+        "data": {}
+      },
+      "discord": {
+        "id": "524013747497336842",
+        "identifier": "discord:524013747497336842",
+        "data": {}
+      }
+    },
+    "permissions": [
+      "all_permissions"
+    ]
+  }
+]

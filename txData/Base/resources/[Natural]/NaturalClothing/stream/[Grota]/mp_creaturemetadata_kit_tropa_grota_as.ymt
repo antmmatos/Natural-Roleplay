@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CCreatureMetaData>
+ <pedCompExpressions />
+ <pedPropExpressions>
+  <Item>
+   <pedPropID value="0x0" />
+   <pedPropVarIndex value="0x0" />
+   <pedPropExpressionIndex value="0x0" />
+   <tracks content="char_array">
+    33
+   </tracks>
+   <ids content="short_array">
+    13201
+   </ids>
+   <types content="char_array">
+    2
+   </types>
+   <components content="char_array">
+    1
+   </components>
+  </Item>
+ </pedPropExpressions>
+</CCreatureMetaData>
